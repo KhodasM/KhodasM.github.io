@@ -289,6 +289,36 @@ input:focus, textarea:focus {
     text-align: center;
 }
 
+.project-link {
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-block;
+    position: relative;
+    padding: 0.3rem 0;
+}
+
+.project-link:hover {
+    color: #57cbff;
+    transform: translateX(5px);
+}
+
+.project-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--secondary);
+    transition: width 0.3s;
+}
+
+.project-link:hover::after {
+    width: 100%;
+}
+
 @media (max-width: 768px) {
     :root {
         --section-padding: 4rem;
