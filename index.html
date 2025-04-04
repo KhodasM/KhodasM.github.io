@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Портфолио фронтенд-разработчика">
+    <title>Frontend Проект</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <style>html{scroll-behavior:smooth}</style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="logo">МХ</a>
+            <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+            <label for="menu-toggle" class="menu-button">☰</label>
+            <ul class="nav-list">
+                <li><a href="#top">Главная</a></li>
+                <li><a href="#works">Работы</a></li>
+                <li><a href="#about">Обо мне</a></li>
+                <li><a href="#contact">Контакты</a></li>
+                <label for="menu-toggle" class="menu-close">✕</label>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="top">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Максим Ходас</h1>
+                    <p class="hero-subtitle">Frontend Developer, Java Backend Developer </p>
+                    <p class="hero-description">Студент 1-ого курса ВШПИ МФТИ</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="works" class="works">
+            <div class="container">
+                <h2 class="section-title">Мои работы</h2>
+                <div class="work-grid">
+                    <article class="work-card">
+                        <div class="work-image">
+                            <img src="project.png" alt="Проект" loading="lazy" width="800" height="500">
+                        </div>
+                        <div class="work-info">
+                            <h3>Телеграм-бот для новостных рекомендаций</h3>
+                            <div class="work-tech">
+                                <span>Java</span>
+                                <span>Spring boot</span>
+                                <span>SQL</span>
+                            </div>
+                            <ul class="work-features">
+                                <li>Работа с ML</li>
+                                <li>Менторство от МТС Senior Developer</li>
+                                <li>Команда из 4 человек</li>
+                                <p>Ссылка на проект</p>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">Обо мне</h2>
+                <div class="about-content">
+                    <p class="about-text">
+                        Родился и вырос в Челябинске. Люблю путешествовать и заниматься спортом, а по выходным ходить с пацанами в компы. Сейчас обучаюсь на 1-ом курсе МФТИ и планиирую стать востребованным Java разработчиком.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Контакты</h2>
+                <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required placeholder="Ваше имя" minlength="2">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" required placeholder="Сообщение" minlength="10"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Отправить</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="copyright">© 2024 Максим Ходас</p>
+        </div>
+    </footer>
+</body>
+</html>
