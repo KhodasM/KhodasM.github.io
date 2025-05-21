@@ -39,32 +39,36 @@
         <section id="works" class="works">
             <div class="container">
                 <h2 class="section-title">Мои работы</h2>
-                <div class="work-grid">
-                    <article class="work-card">
-                        <div class="work-image">
-                            <img src="project.png" alt="Проект" loading="lazy" width="800" height="500">
-                        </div>
-                        <div class="work-info">
-                            <h3>Телеграм-бот для новостных рекомендаций</h3>
-                            <div class="work-tech">
-                                <span>Java</span>
-                                <span>Spring boot</span>
-                                <span>SQL</span>
-                            </div>
-                            <ul class="work-features">
-                                <li>Работа с ML</li>
-                                <li>Менторство от МТС Senior Developer</li>
-                                <li>Команда из 4 человек</li>
-                                <li>
-                                    <a href=https://github.com/Vlad-Ali/news-recommendation-service
-                                       class="project-link" 
-                                       target="_blank" 
-                                       rel="noopener noreferrer">
-                                        Ссылка на проект
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                <div class="works-description">
+                    <h3>Телеграм-бот для новостных рекомендаций</h3>
+                    <div class="work-tech">
+                        <span>Java</span>
+                        <span>Spring boot</span>
+                        <span>SQL</span>
+                    </div>
+                    <ul class="work-features">
+                        <li>Работа с ML</li>
+                        <li>Менторство от МТС Senior Developer</li>
+                        <li>Команда из 4 человек</li>
+                        <li>
+                            <a href="https://github.com/Vlad-Ali/news-recommendation-service"
+                               class="project-link" 
+                               target="_blank" 
+                               rel="noopener noreferrer">
+                                Ссылка на проект
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="work-gallery">
+                    <article class="gallery-item">
+                        <img src="project.png" loading="lazy">
+                    </article>
+                    <article class="gallery-item">
+                        <img src="bot2.png" loading="lazy">
+                    </article>
+                    <article class="gallery-item">
+                        <img src="Bot1.png" loading="lazy">
                     </article>
                 </div>
             </div>
@@ -102,8 +106,20 @@
 
     <footer class="footer">
         <div class="container">
+            <p class="summer-timer">До лета осталось: <span id="summerCountdown">...</span></p>
             <p class="copyright">© 2024 Максим Ходас</p>
         </div>
     </footer>
+
+    <div class="image-popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <img src="" alt="" class="popup-image">
+            <button class="nav-btn prev-btn">&lt;</button>
+            <button class="nav-btn next-btn">&gt;</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
