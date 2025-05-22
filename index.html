@@ -88,18 +88,7 @@
         <section id="contact" class="contact">
             <div class="container">
                 <h2 class="section-title">Контакты</h2>
-                <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" required placeholder="Ваше имя" minlength="2">
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" required placeholder="Email">
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" required placeholder="Сообщение" minlength="10"></textarea>
-                    </div>
-                    <button type="submit" class="btn">Отправить</button>
-                </form>
+                <button class="btn contact-btn">Связаться со мной</button>
             </div>
         </section>
     </main>
@@ -119,6 +108,34 @@
             <button class="nav-btn next-btn">&gt;</button>
         </div>
     </div>
+
+    <div class="timeout-popup">
+        <div class="timeout-content">
+            <span class="timeout-close">&times;</span>
+            <p>Поздравляю, вы находитесь на сайте уже 30 секунд</p>
+        </div>
+    </div>
+    
+    <div class="contact-popup">
+        <div class="contact-popup-content">
+            <span class="contact-close-btn">&times;</span>
+            <form class="contact-form" id="popup-form">
+                <div class="form-group">
+                    <input type="text" id="popup-name" name="name" placeholder="Ваше имя">
+                    <span class="validation-error"></span>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="popup-email" name="email" placeholder="Email">
+                    <span class="validation-error"></span>
+                </div>
+                <div class="form-group">
+                    <textarea id="popup-message" name="message" placeholder="Сообщение"></textarea>
+                    <span class="validation-error"></span>
+                </div>
+                <button type="submit" class="btn submit-btn">Отправить сообщение</button>
+            </form>
+        </div>
+    </div>    
 
     <script src="script.js"></script>
 </body>
