@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
-        
+            
         document.getElementById('summerCountdown').innerHTML = 
             `${days}д ${hours}ч ${minutes}м ${seconds}с`;
     }
@@ -227,4 +227,32 @@ document.addEventListener('DOMContentLoaded', () => {
     toggleStickyHeader();
     updateSummerTimer();
     setInterval(updateSummerTimer, 1000);
+
+    const path = document.querySelector('.draw-path');
+    if(path) {
+        const pathLength = path.getTotalLength();
+  
+        function updatePathAnimation() {
+            const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrolled = window.scrollY;
+            
+            const progress = Math.min(scrolled / scrollableHeight, 1);
+            
+            const drawLength = pathLength * progress;
+            path.style.strokeDashoffset = pathLength - drawLength;
+            
+            path.style.opacity = 1 - progress * 0.5;
+        }
+
+        path.style.strokeDasharray = pathLength;
+        path.style.strokeDashoffset = pathLength;
+        
+        let isScrolling;
+        window.addEventListener('scroll', () => {
+            window.cancelAnimationFrame(isScrolling);
+            isScrolling = window.requestAnimationFrame(updatePathAnimation);
+        });
+
+        updatePathAnimation();
+    }
 });
